@@ -1,202 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>StudyMate - AI Study Assistant</title>
+    <title>StudyMate | AI Learning Companion</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+    <!-- NAVBAR -->
+    <header class="navbar">
 
-        <div class="logo">
-            📚 StudyMate
-        </div>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">📚</span>
+            <span>Study<span>Mate</span></span>
+        </a>
 
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="notes.html">Smart Notes</a>
             <a href="quiz.html">Quick Quiz</a>
             <a href="ask-ai.html">Ask AI</a>
+            <a href="track-progress.html">Track Progress</a>
+            <a href="#" class="login-btn">♙ Login</a>
         </nav>
 
     </header>
 
 
     <!-- HERO SECTION -->
-<section class="hero">
+    <section class="hero">
 
-    <div class="hero-content">
+        <div class="hero-left">
 
-        <div class="hero-badge">
-            ✨ AI Powered Learning
-        </div>
-
-        <h1>
-            Learn Smarter.<br>
-            <span>Study Better.</span>
-        </h1>
-
-        <p class="hero-text">
-            StudyMate is your smart learning companion for
-            notes, quizzes, AI assistance and progress tracking.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="quiz.html" class="start-btn">
-                Start Learning 🚀
-            </a>
-
-            <a href="#features" class="explore-btn">
-                Explore Features ↓
-            </a>
-        </div>
-
-        <div class="hero-stats">
-            <div>
-                <strong>4+</strong>
-                <small>Smart Tools</small>
+            <div class="badge">
+                ✨ AI-Powered Learning Companion
             </div>
 
-            <div>
-                <strong>24/7</strong>
-                <small>Learning Support</small>
+            <h1>
+                Learn <span>Smarter.</span><br>
+                Achieve <span>Better.</span>
+            </h1>
+
+            <p class="hero-description">
+                Your AI-powered study companion for notes, quizzes,
+                doubt solving and tracking progress — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="quiz.html" class="primary-btn">
+                    Get Started →
+                </a>
+
+                <a href="#features" class="secondary-btn">
+                    ▷ &nbsp; How It Works
+                </a>
+
             </div>
 
-            <div>
-                <strong>AI</strong>
-                <small>Powered</small>
+            <div class="hero-points">
+
+                <div>
+                    ⚡
+                    <span>Smart & Efficient</span>
+                </div>
+
+                <div>
+                    🤖
+                    <span>AI Assistance</span>
+                </div>
+
+                <div>
+                    📈
+                    <span>Track Progress</span>
+                </div>
+
             </div>
+
         </div>
 
-    </div>
 
-    <div class="hero-visual">
+        <!-- DASHBOARD VISUAL -->
+        <div class="hero-right">
 
-        <div class="floating-card card-one">
-            📝
-            <span>Smart Notes</span>
+            <div class="glow"></div>
+
+            <div class="dashboard">
+
+                <div class="dashboard-top">
+                    <div>
+                        <small>Study Dashboard</small>
+                        <h3>Welcome back, Student! 👋</h3>
+                        <p>Keep learning, keep growing.</p>
+                    </div>
+
+                    <div class="profile-circle">♙</div>
+                </div>
+
+
+                <div class="stats-row">
+
+                    <div class="stat">
+                        <small>Notes Created</small>
+                        <strong>128</strong>
+                        <span>+12 this week</span>
+                    </div>
+
+                    <div class="stat">
+                        <small>Quizzes Taken</small>
+                        <strong>45</strong>
+                        <span>+8 this week</span>
+                    </div>
+
+                    <div class="stat">
+                        <small>Accuracy</small>
+                        <strong>89%</strong>
+                        <span>+5% this week</span>
+                    </div>
+
+                    <div class="stat">
+                        <small>Study Time</small>
+                        <strong>32 hrs</strong>
+                        <span>+6 this week</span>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-bottom">
+
+                    <div class="activity">
+
+                        <h4>Recent Activity</h4>
+
+                        <div class="activity-item">
+                            📕 <span>Biology Notes</span>
+                        </div>
+
+                        <div class="activity-item">
+                            🟢 <span>Physics Quiz</span>
+                        </div>
+
+                        <div class="activity-item">
+                            🟠 <span>Chemistry Notes</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart">
+
+                        <h4>Progress Overview</h4>
+
+                        <div class="chart-line">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="days">
+                            <small>Mon</small>
+                            <small>Tue</small>
+                            <small>Wed</small>
+                            <small>Thu</small>
+                            <small>Fri</small>
+                            <small>Sat</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FLOATING CARDS -->
+
+            <div class="float-card notes-float">
+                📝
+                <span>Smart Notes</span>
+            </div>
+
+            <div class="float-card ai-float">
+                🤖
+                <span>Ask AI</span>
+            </div>
+
+            <div class="float-card progress-float">
+                📊
+                <span>Progress</span>
+            </div>
+
         </div>
-
-        <div class="floating-card card-two">
-            🧠
-            <span>Ask AI</span>
-        </div>
-
-        <div class="main-circle">
-            📚
-            <h3>StudyMate</h3>
-            <p>Your Learning Companion</p>
-        </div>
-
-        <div class="floating-card card-three">
-            📊
-            <span>Track Progress</span>
-        </div>
-
-    </div>
-
-</section>
-   
 
     </section>
 
 
     <!-- FEATURES -->
-    <section class="features">
+    <section id="features" class="features-section">
 
-        <!-- SMART NOTES -->
-        <a href="notes.html" class="feature-card">
+        <div class="section-title">
 
-            <div class="icon">
-                📖
+            <div class="small-title">
+                ── ✨ POWERFUL FEATURES ✨ ──
             </div>
 
             <h2>
-                Smart Notes
+                Everything You Need to
+                <span>Study Smarter</span>
             </h2>
 
-            <p>
-                Organize and review your study
-                notes easily.
-            </p>
-
-        </a>
+        </div>
 
 
-        <!-- QUICK QUIZ -->
-        <a href="quiz.html" class="feature-card">
+        <div class="features">
 
-            <div class="icon">
-                ❓
-            </div>
+            <!-- SMART NOTES -->
+            <a href="notes.html" class="feature-card">
 
-            <h2>
-                Quick Quiz
-            </h2>
+                <div class="feature-icon notes-icon">
+                    📝
+                </div>
 
-            <p>
-                Test your knowledge with
-                interactive quizzes.
-            </p>
+                <h3>Smart Notes</h3>
 
-        </a>
+                <p>
+                    Organize, create and review your study notes
+                    easily with AI assistance.
+                </p>
 
-
-        <!-- ASK AI -->
-        <a href="ask-ai.html" class="feature-card">
-
-            <div class="icon">
-                🤖
-            </div>
-
-            <h2>
-                Ask AI
-            </h2>
-
-            <p>
-                Get simple explanations
-                for difficult topics.
-            </p>
-
-        </a>
+            </a>
 
 
-        <!-- TRACK PROGRESS -->
-<a href="progress.html" class="feature-card">
+            <!-- QUIZ -->
+            <a href="quiz.html" class="feature-card">
 
-    <div class="icon">📊</div>
+                <div class="feature-icon quiz-icon">
+                    ❓
+                </div>
 
-    <h2>Track Progress</h2>
+                <h3>Quick Quiz</h3>
 
-    <p>
-        Monitor your learning progress
-        and improve your skills.
-    </p>
+                <p>
+                    Test your knowledge with interactive quizzes
+                    and instant results.
+                </p>
 
-</a>
+            </a>
+
+
+            <!-- ASK AI -->
+            <a href="ask-ai.html" class="feature-card">
+
+                <div class="feature-icon ai-icon">
+                    🤖
+                </div>
+
+                <h3>Ask AI</h3>
+
+                <p>
+                    Get instant explanations, solve doubts
+                    and understand any topic easily.
+                </p>
+
+            </a>
+
+
+            <!-- PROGRESS -->
+            <a href="track-progress.html" class="feature-card">
+
+                <div class="feature-icon progress-icon">
+                    📈
+                </div>
+
+                <h3>Track Progress</h3>
+
+                <p>
+                    Monitor your performance and improve your
+                    skills with detailed analytics.
+                </p>
+
+            </a>
+
+        </div>
 
     </section>
 
 
-    <!-- ABOUT SECTION -->
-    <section class="about">
+    <!-- WHY STUDYMATE -->
+    <section class="why-section">
 
-        <h2>
-            Why StudyMate?
-        </h2>
+        <div class="why-content">
 
-        <p>
-            StudyMate helps students learn better
-            by combining smart notes, quizzes,
-            AI assistance and progress tracking
-            in one simple platform.
-        </p>
+            <div>
+                <span class="small-title">WHY STUDYMATE?</span>
+
+                <h2>
+                    One place for your
+                    <span>entire learning journey.</span>
+                </h2>
+
+                <p>
+                    StudyMate combines smart notes, quizzes,
+                    AI assistance and progress tracking into one
+                    simple learning platform.
+                </p>
+            </div>
+
+            <div class="why-box">
+
+                <div>
+                    <strong>01</strong>
+                    <span>Learn</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Practice</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Improve</span>
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
@@ -204,12 +342,21 @@
     <!-- FOOTER -->
     <footer>
 
+        <div class="footer-logo">
+            📚 StudyMate
+        </div>
+
         <p>
-            © 2026 StudyMate | AI Study Assistant
+            Your AI-powered learning companion.
+        </p>
+
+        <p class="copyright">
+            © 2026 StudyMate | All Rights Reserved
         </p>
 
     </footer>
 
-
 </body>
+
+</html>
 </html>
