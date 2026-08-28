@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate - Quick Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📚 StudyMate</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="notes.html">Notes</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="#">Progress</a>
+    </nav>
+</header>
+
+<section class="quiz-section">
+
+    <h1>❓ Quick Quiz</h1>
+    <p>Test your knowledge!</p>
+
+    <div class="quiz-box">
+
+        <h2 id="question">Question</h2>
+
+        <div id="options"></div>
+
+        <button id="nextBtn" onclick="nextQuestion()">
+            Next ➜
+        </button>
+
+        <h3 id="score"></h3>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 StudyMate | Quick Quiz</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+    {
+        question: "What does CPU stand for?",
+        options: [
+            "Central Processing Unit",
+            "Computer Personal Unit",
+            "Central Program Utility",
+            "Control Processing User"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which language is used to style web pages?",
+        options: [
+            "Python",
+            "CSS",
+            "Java",
+            "SQL"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which HTML tag is used for the main heading?",
+        options: [
+            "<p>",
+            "<head>",
+            "<h1>",
+            "<title>"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Which one is a database management system?",
+        options: [
+            "MySQL",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "What does AI stand for?",
+        options: [
+            "Automatic Internet",
+            "Artificial Intelligence",
+            "Advanced Input",
+            "Applied Information"
+        ],
+        answer: 1
+    }
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+
+    const question = questions[currentQuestion];
+
+    document.getElementById("question").innerText =
+        question.question;
+
+    const optionsDiv =
+        document.getElementById("options");
+
+    optionsDiv.innerHTML = "";
+
+    question.options.forEach((option, index) => {
+
+        const button = document.createElement("button");
+
+        button.innerText = option;
+
+        button.className = "option";
+
+        button.onclick = function () {
+            checkAnswer(index);
+        };
+
+        optionsDiv.appendChild(button);
+
+    });
+
+}
+
+function checkAnswer(selected) {
+
+    const correct =
+        questions[currentQuestion].answer;
+
+    const optionButtons =
+        document.querySelectorAll(".option");
+
+    optionButtons.forEach(button => {
+        button.disabled = true;
+    });
+
+    if (selected === correct) {
+        score++;
+        alert("Correct! 🎉");
+    } else {
+        alert("Wrong answer! ❌");
+    }
+
+}
+
+function nextQuestion() {
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+
+        loadQuestion();
+
+    } else {
+
+        document.getElementById("question").innerText =
+            "🎉 Quiz Completed!";
+
+        document.getElementById("options").innerHTML = "";
+
+        document.getElementById("nextBtn").style.display =
+            "none";
+
+        document.getElementById("score").innerText =
+            "Your Score: " + score + " / " + questions.length;
+
+    }
+
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>

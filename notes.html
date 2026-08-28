@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyMate - Smart Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        📚 StudyMate
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="notes.html">Smart Notes</a>
+        <a href="quiz.html">Quick Quiz</a>
+        <a href="#">Ask AI</a>
+    </nav>
+
+</header>
+
+
+<section class="notes-hero">
+
+    <h1>📖 Smart Notes</h1>
+
+    <p>
+        Choose a subject and explore your study notes.
+    </p>
+
+</section>
+
+
+<section class="notes-container">
+
+    <!-- Computer Networks -->
+
+    <div class="note-card">
+
+        <div class="note-icon">💻</div>
+
+        <h2>Computer Networks</h2>
+
+        <p>
+            Learn about OSI model, TCP/IP,
+            routing and network protocols.
+        </p>
+
+        <button onclick="showNotes('Computer Networks')">
+            View Notes
+        </button>
+
+    </div>
+
+
+    <!-- DBMS -->
+
+    <div class="note-card">
+
+        <div class="note-icon">🗄️</div>
+
+        <h2>DBMS</h2>
+
+        <p>
+            Learn SQL, normalization,
+            transactions and database concepts.
+        </p>
+
+        <button onclick="showNotes('DBMS')">
+            View Notes
+        </button>
+
+    </div>
+
+
+    <!-- Cloud Computing -->
+
+    <div class="note-card">
+
+        <div class="note-icon">☁️</div>
+
+        <h2>Cloud Computing</h2>
+
+        <p>
+            Learn virtualization,
+            cloud models and architecture.
+        </p>
+
+        <button onclick="showNotes('Cloud Computing')">
+            View Notes
+        </button>
+
+    </div>
+
+
+    <!-- Artificial Intelligence -->
+
+    <div class="note-card">
+
+        <div class="note-icon">🤖</div>
+
+        <h2>Artificial Intelligence</h2>
+
+        <p>
+            Learn machine learning,
+            neural networks and AI concepts.
+        </p>
+
+        <button onclick="showNotes('Artificial Intelligence')">
+            View Notes
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- NOTES DISPLAY -->
+
+<section id="noteDisplay" class="note-display">
+
+    <h2 id="noteTitle">
+        Select a subject
+    </h2>
+
+    <p id="noteContent">
+        Click "View Notes" to display your study notes here.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 StudyMate | Smart Notes
+    </p>
+
+</footer>
+
+
+<script>
+
+function showNotes(subject) {
+
+    const title =
+        document.getElementById("noteTitle");
+
+    const content =
+        document.getElementById("noteContent");
+
+
+    if (subject === "Computer Networks") {
+
+        title.innerText =
+            "💻 Computer Networks";
+
+        content.innerHTML =
+            "<b>OSI Model:</b> Application, Presentation, Session, Transport, Network, Data Link and Physical layers.<br><br>" +
+            "<b>TCP/IP:</b> A communication model used for networking and Internet communication.<br><br>" +
+            "<b>Routing:</b> Process of selecting a path for data packets.";
+
+    }
+
+
+    else if (subject === "DBMS") {
+
+        title.innerText =
+            "🗄️ DBMS";
+
+        content.innerHTML =
+            "<b>DBMS:</b> Software used to store, manage and retrieve data.<br><br>" +
+            "<b>SQL:</b> Used to create, access and manipulate databases.<br><br>" +
+            "<b>Normalization:</b> Technique used to reduce data redundancy.";
+
+    }
+
+
+    else if (subject === "Cloud Computing") {
+
+        title.innerText =
+            "☁️ Cloud Computing";
+
+        content.innerHTML =
+            "<b>Cloud Computing:</b> Delivery of computing resources over the Internet.<br><br>" +
+            "<b>IaaS:</b> Infrastructure as a Service.<br><br>" +
+            "<b>PaaS:</b> Platform as a Service.<br><br>" +
+            "<b>SaaS:</b> Software as a Service.";
+
+    }
+
+
+    else if (subject === "Artificial Intelligence") {
+
+        title.innerText =
+            "🤖 Artificial Intelligence";
+
+        content.innerHTML =
+            "<b>AI:</b> Technology that enables machines to perform intelligent tasks.<br><br>" +
+            "<b>Machine Learning:</b> Machines learn patterns from data.<br><br>" +
+            "<b>Neural Networks:</b> Computing models inspired by the human brain.";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

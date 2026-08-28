@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyMate - Ask AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        📚 StudyMate
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="notes.html">Smart Notes</a>
+        <a href="quiz.html">Quick Quiz</a>
+        <a href="ask-ai.html">Ask AI</a>
+    </nav>
+
+</header>
+
+
+<section class="ai-section">
+
+    <h1>🤖 Ask StudyMate AI</h1>
+
+    <p>
+        Ask a study question and get a simple explanation.
+    </p>
+
+    <div class="ai-box">
+
+        <textarea
+            id="questionInput"
+            placeholder="Example: What is cloud computing?"
+        ></textarea>
+
+        <button onclick="askAI()">
+            Ask AI 🚀
+        </button>
+
+        <div id="aiAnswer">
+            <h2>AI Answer</h2>
+            <p>Your answer will appear here.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 StudyMate | AI Study Assistant
+    </p>
+
+</footer>
+
+
+<script>
+
+function askAI() {
+
+    const question =
+        document.getElementById("questionInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const answer =
+        document.getElementById("aiAnswer");
+
+
+    if (question === "") {
+
+        answer.innerHTML =
+            "<h2>⚠️ Please enter a question.</h2>";
+
+        return;
+    }
+
+
+    if (
+        question.includes("cloud computing") ||
+        question.includes("cloud")
+    ) {
+
+        answer.innerHTML = `
+            <h2>☁️ Cloud Computing</h2>
+            <p>
+                Cloud computing is the delivery of computing
+                services such as storage, servers and software
+                through the Internet.
+            </p>
+        `;
+
+    }
+
+
+    else if (
+        question.includes("cpu")
+    ) {
+
+        answer.innerHTML = `
+            <h2>💻 CPU</h2>
+            <p>
+                CPU stands for Central Processing Unit.
+                It executes instructions and performs
+                calculations in a computer.
+            </p>
+        `;
+
+    }
+
+
+    else if (
+        question.includes("html")
+    ) {
+
+        answer.innerHTML = `
+            <h2>🌐 HTML</h2>
+            <p>
+                HTML stands for HyperText Markup Language.
+                It is used to structure content on web pages.
+            </p>
+        `;
+
+    }
+
+
+    else if (
+        question.includes("dbms")
+    ) {
+
+        answer.innerHTML = `
+            <h2>🗄️ DBMS</h2>
+            <p>
+                DBMS stands for Database Management System.
+                It helps users store, manage and retrieve data.
+            </p>
+        `;
+
+    }
+
+
+    else if (
+        question.includes("ai") ||
+        question.includes("artificial intelligence")
+    ) {
+
+        answer.innerHTML = `
+            <h2>🤖 Artificial Intelligence</h2>
+            <p>
+                Artificial Intelligence is a field of computing
+                that enables machines to perform tasks that
+                normally require human intelligence.
+            </p>
+        `;
+
+    }
+
+
+    else {
+
+        answer.innerHTML = `
+            <h2>📚 StudyMate</h2>
+            <p>
+                I can currently answer questions about
+                Cloud Computing, CPU, HTML, DBMS and AI.
+                Try asking one of these topics!
+            </p>
+        `;
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
